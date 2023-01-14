@@ -1,5 +1,5 @@
-import Example from "../components/Example";
-import { H1, Subheading, H2 } from "../components/Elements";
+import Example from "../src/components/Example";
+import { H1, Subheading, H2 } from "../src/components/Elements";
 import { useState } from "react";
 
 function Alert({ color = "blue", children }) {
@@ -23,22 +23,23 @@ function Alert({ color = "blue", children }) {
   ) : null;
 };
 
-export default function accordian() { return (
-  <div>
-    <H1>Alerts</H1>
-    <Subheading>
-      Provide contextual feedback messages for typical user actions with the
-      handful of available and flexible alert messages.
-    </Subheading>
+export default function accordian() {
+  return (
+    <div>
+      <H1>Alerts</H1>
+      <Subheading>
+        Provide contextual feedback messages for typical user actions with the
+        handful of available and flexible alert messages.
+      </Subheading>
 
-    <H2>React Component Example</H2>
+      <H2>React Component Example</H2>
 
-    <p>
-      Tailstrap alerts can be used much less verbosely if made into a React
-      component.
-    </p>
-    <Example
-      code={`const Alert = ({ color = "blue", children }) => {
+      <p>
+        Tailstrap alerts can be used much less verbosely if made into a React
+        component.
+      </p>
+      <Example
+        code={`const Alert = ({ color = "blue", children }) => {
   const [show, setShow] = useState(true);
 
   return show ? (
@@ -62,19 +63,19 @@ export default function accordian() { return (
 
 <Alert color="green">A simple success alert—check it out!</Alert>
 `}
-    >
-      <Alert color="green">A simple success alert—check it out!</Alert>
-    </Example>
+      >
+        <Alert color="green">A simple success alert—check it out!</Alert>
+      </Example>
 
-    <h2 className="font-medium text-3xl mt-10">Examples</h2>
-    <p>
-      Alerts are available for any length of text, as well as an optional
-      dismiss button. For inline dismissal, use a javascript framework that can
-      listen for click events on the close button.
-    </p>
+      <h2 className="font-medium text-3xl mt-10">Examples</h2>
+      <p>
+        Alerts are available for any length of text, as well as an optional
+        dismiss button. For inline dismissal, use a javascript framework that can
+        listen for click events on the close button.
+      </p>
 
-    <Example
-      code={`<div class="rounded border border-blue-400 text-blue-800 bg-blue-200 p-4 mb-4 font-mono" role="alert">
+      <Example
+        code={`<div class="rounded border border-blue-400 text-blue-800 bg-blue-200 p-4 mb-4 font-mono" role="alert">
 A simple primary alert—check it out!
 </div>
 
@@ -98,5 +99,6 @@ A simple warning alert—check it out!
 A simple info alert—check it out!
 </div>
 `}
-    />
-  </div>)}
+      />
+    </div>)
+}

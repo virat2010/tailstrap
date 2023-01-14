@@ -1,13 +1,15 @@
-import Example from "../components/Example";
+import Example from "../src/components/Example";
 
-function Badge({ color = "blue", children }) {render(
-  <div
-    className={`rounded border border-${color}-400 text-${color}-800 bg-${color}-200 p-4 mb-4`}
-    role="alert"
-  >
-    {children}
-  </div>
-)}
+function Badge({ color = "blue", children }) {
+  render(
+    <div
+      className={`rounded border border-${color}-400 text-${color}-800 bg-${color}-200 p-4 mb-4`}
+      role="alert"
+    >
+      {children}
+    </div>
+  )
+}
 
 export default () => (
   <div>
