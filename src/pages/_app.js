@@ -5,7 +5,7 @@ import Image from "next/image";
 import Menu from "../components/Menu";
 import "../styles/github-gist.css";
 import "../styles/globals.css";
-import Head from "next/Head";
+import Head from "next/head";
 
 export default class MyApp extends App {
   static async getInitialProps({ Component, router, ctx }) {
