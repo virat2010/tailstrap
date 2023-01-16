@@ -1,24 +1,28 @@
 import Link from "next/link";
-import { withRouter } from "next/router";
+import { withRouter,useRouter } from "next/router";
+import { BsBookHalf, BsUiRadios,BsFillMenuButtonWideFill } from 'react-icons/bs';
+import { HiOutlineSwatch } from 'react-icons/hi2';
 
 const SectionLink = withRouter(
   ({ router, href, children, selected = false, className = "" }) => (
     <Link href={href}
       className={
-        "no-underline block font-medium hover:text-gray-900 p-1 " +
-        (selected || router.pathname === href
-          ? "text-black"
-          : "text-gray-800")+" "+className}>
+        `no-underline block font-semibold p-1 ${className}`}>
         {children}
     </Link>
   )
 );
 
-const SubsectionLink = ({ href, children, selected = false }) => (
-  <SectionLink href={href} selected={selected} className="text-sm">
+function SubsectionLink({ href, children, selected = false }) {
+  const router = useRouter()
+  return (
+  <SectionLink href={href} selected={selected} className={`text-sm
+  ${selected || router.pathname === href
+          ? "border rounded-lg font-semibold bg-purple-200 w-auto inline-block"
+          : "hover:bg-purple-200 rounded-lg !font-normal w-auto inline-block"} `}>
     {children}
-  </SectionLink>
-);
+  </SectionLink>)
+}
 
 export default ({ className }) => (
   <div
@@ -33,14 +37,14 @@ export default ({ className }) => (
       />
     </div>
 
-    <div className="overflow-y-scroll h-full border-t p-4">
-      <SectionLink href="/">Getting Started</SectionLink>
-      <SectionLink href="/">Layout</SectionLink>
-      <SectionLink href="/">Content</SectionLink>
+    <div className="overflow-y-scroll h-full border-t pl-6 py-2 whitespace-nowrap">
+      <SectionLink href="/"><BsBookHalf className='inline text-violet-600' /> Getting Started</SectionLink>
+      <SectionLink href="/"><HiOutlineSwatch className='inline text-pink-500' /> Content</SectionLink>
+      <SectionLink href="/"><BsUiRadios className='inline text-blue-500' /> Forms</SectionLink>
       <SectionLink href="/" selected={true}>
-        Components
+        <BsFillMenuButtonWideFill className="inline text-cyan-400" /> Components
       </SectionLink>
-
+      <div className="pl-6">
       <ul className="list-reset">
         <li>
           <SubsectionLink href="/accordion">Accordion</SubsectionLink>
@@ -109,6 +113,7 @@ export default ({ className }) => (
           <SubsectionLink href="/tooltips">Tooltips</SubsectionLink>
         </li>
       </ul>
+      </div>
     </div>
   </div>
 );

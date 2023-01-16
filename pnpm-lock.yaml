@@ -2,7 +2,6 @@ lockfileVersion: 5.4
 
 specifiers:
   autoprefixer: ^10.4.13
-  bootstrap-icons: ^1.10.3
   core-js: ^3.27.1
   eslint-config-next: ^13.1.2
   highlight.js: 11.7.0
@@ -11,18 +10,19 @@ specifiers:
   react: ^18.2.0
   react-dom: ^18.2.0
   react-highlight: ^0.12.0
+  react-icons: ^4.7.1
   tailwind: ^4.0.0
   tailwindcss: ^3.2.4
   uuid: ^9.0.0
 
 dependencies:
-  bootstrap-icons: 1.10.3
   core-js: 3.27.1
   highlight.js: 11.7.0
   next: 13.1.2_biqbaboplfbrettd7655fr4n2y
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-highlight: 0.12.0_biqbaboplfbrettd7655fr4n2y
+  react-icons: 4.7.1_react@18.2.0
   tailwind: 4.0.0
   uuid: 9.0.0
 
@@ -529,10 +529,6 @@ packages:
       type-is: 1.6.18
     transitivePeerDependencies:
       - supports-color
-    dev: false
-
-  /bootstrap-icons/1.10.3:
-    resolution: {integrity: sha512-7Qvj0j0idEm/DdX9Q0CpxAnJYqBCFCiUI6qzSPYfERMcokVuV9Mdm/AJiVZI8+Gawe4h/l6zFcOzvV7oXCZArw==}
     dev: false
 
   /brace-expansion/1.1.11:
@@ -2304,6 +2300,14 @@ packages:
       highlight.js: 9.18.5
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
+    dev: false
+
+  /react-icons/4.7.1_react@18.2.0:
+    resolution: {integrity: sha512-yHd3oKGMgm7zxo3EA7H2n7vxSoiGmHk5t6Ou4bXsfcgWyhfDKMpyKfhHR6Bjnn63c+YXBLBPUql9H4wPJM6sXw==}
+    peerDependencies:
+      react: '*'
+    dependencies:
+      react: 18.2.0
     dev: false
 
   /react-is/16.13.1:

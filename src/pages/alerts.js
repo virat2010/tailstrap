@@ -1,6 +1,7 @@
-import Example from "../src/components/Example";
-import { H1, Subheading, H2 } from "../src/components/Elements";
+import Example from "../components/Example";
+import { H1, Subheading, H2 } from "../components/Elements";
 import { useState } from "react";
+import { MdClose } from "react-icons/md";
 
 function Alert({ color = "blue", children }) {
   const [show, setShow] = useState(true);
@@ -11,12 +12,12 @@ function Alert({ color = "blue", children }) {
     >
       <button
         type="button"
-        className="absolute top-0 right-0 px-4 py-3 text-xl font-bold"
+        className="absolute top-0 right-0 px-4 py-3 font-bold"
         datadismiss="alert"
         aria-label="Close"
         onClick={() => setShow(false)}
       >
-        <span aria-hidden="true">&times;</span>
+        <MdClose></MdClose>
       </button>
       {children}
     </div>
@@ -35,8 +36,7 @@ export default function accordian() {
       <H2>React Component Example</H2>
 
       <p>
-        Tailstrap alerts can be used much less verbosely if made into a React
-        component.
+        Go ahead and check out the <a href="https://getbootstrap.com/docs/5.3/components/alerts/">BS5</a> for this as well for more info. Here is an example of an interactive alert in React.
       </p>
       <Example
         code={`const Alert = ({ color = "blue", children }) => {
@@ -54,7 +54,7 @@ export default function accordian() {
         aria-label="Close"
         onClick={() => setShow(false)}
       >
-        <span aria-hidden="true">&times;</span>
+        <MdClose></MdClose>
       </button>
       {children}
     </div>

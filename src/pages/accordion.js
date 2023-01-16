@@ -1,5 +1,5 @@
-import Example from "../src/components/Example";
-import { H1, Subheading, H2 } from "../src/components/Elements";
+import Example from "../components/Example";
+import { H1, Subheading, H2 } from "../components/Elements";
 
 export default () => (
   <div>

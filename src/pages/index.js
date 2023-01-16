@@ -1,4 +1,4 @@
-import { H1, Subheading, H2 } from "../src/components/Elements";
+import { H1, Subheading, H2 } from "../components/Elements";
 import Head from "next/Head";
 
 function index() {

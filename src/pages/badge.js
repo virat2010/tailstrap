@@ -1,4 +1,4 @@
-import Example from "../src/components/Example";
+import Example from "../components/Example";
 
 function Badge({ color = "blue", children }) {
   render(
