@@ -1,5 +1,5 @@
 import { H1, Subheading, H2 } from "../components/Elements";
-import Head from "next/Head";
+import Head from "next/head";
 
 function index() {
   return (
